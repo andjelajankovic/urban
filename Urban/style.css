@@ -1,0 +1,215 @@
+/*  https://templated.co/urban  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Scope+One&display=swap');
+:root {
+    --headings: 'Scope One', serif;
+    --bodyFont: 'Roboto', sans-serif;
+    --primary: #a6a6a6;
+    --secondary: #3498db;
+    --tertiary: #000000;
+    --white: #fff;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+/**************
+basic styles
+**************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--fontSize);
+    color: var(--primary);
+    font-weight: 300;
+    line-height: 1.8;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings);
+    color: var(--tertiary);
+}
+button {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    background: var(--secondary);
+    border: none;
+    color: var(--white);
+    margin-top: 30px;
+}
+button:hover {
+    opacity: .8;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+}
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+/**************
+header
+**************/
+header {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 17% 0;
+    color: var(--white);
+}
+header h1 {
+    font-size: 5rem;
+    color: var(--white);
+}
+header p {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+/**************
+first
+**************/
+.first img,
+.third img {
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid #eaeaea;
+    padding: 7px;
+}
+.first article:first-child {
+    width: 27%;
+    float: left;
+}
+.first article:last-child {
+    width: 70%;
+    float: right;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+/**************
+second
+**************/
+.second {
+    background: 3498db;
+}
+.second article:first-child {
+    width: 70%;
+    float: left;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+.second article:last-child {
+    width: 27%;
+    float: right;
+}
+.second h2 {
+    color: var(--white);
+}
+.second p {
+    color: var(--white);
+    opacity: .7;
+}
+.second button {
+    background: var(--white);
+    color: var(--secondary);
+}
+.second button:hover {
+    opacity: .9;
+}
+.second img {
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.6);
+    padding: 7px;
+}
+/**************
+third
+**************/
+.third {
+    background: #fafafa;
+    text-align: center;
+}
+.third article {
+    width: 33%;
+    float: left;
+}
+.third img {
+    width: 80%;
+}
+.third  article p {
+    padding: 20px 40px 0 20px;
+}
+.third h2 {
+    font-size: 3rem;
+}
+.third h2 + p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+/**************
+footer 
+**************/
+footer {
+    text-align: center;
+    padding: 100px;
+}
+footer a {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 20px;
+    font-size: 1.6rem;
+}
+footer a:hover {
+    opacity:.7;
+}
+footer p {
+    margin-top: 30px;
+}
+/***********
+responsive
+**********/
+@media(max-width:768px){
+    .container{
+        width: 90%;
+    }
+    header h1{
+        font-size: 3rem;
+    }
+    .first article:first-child,
+    .first article:last-child,
+    .second article:first-child,
+    .second article:last-child
+    .third article{
+        width: 100%;
+        float: left;
+    }
+    footer a {
+        width: 20px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 50%;
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .third h2 {
+        font-size: 2rem;
+    }
+    }
